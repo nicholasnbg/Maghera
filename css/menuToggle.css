@@ -23,7 +23,7 @@
   display: block;
   position: absolute;
   height: 1vh;
-  background: black;
+  background: white;
   width: 50%;
   opacity: 1;
   -webkit-transform: rotate(0deg);
@@ -34,6 +34,10 @@
   -moz-transition: .4s ease-in-out;
   -o-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
+}
+
+.navbar.scrolled .menuToggle span {
+  background: black;
 }
 
 .leftSpans span:nth-child(1), .rightSpans span:nth-child(1){

@@ -101,6 +101,13 @@ header a {
   text-align: center;
 }
 
+.menuToggle {
+  display: none !important;
+}
+
+#mobile-menu {
+  display: none;
+}
 /*==============HERO=============*/
 .hero {
   height: 70vh;
@@ -255,6 +262,14 @@ footer a {
 /*============MEDIA QUERIES===========*/
 
 @media screen and (max-width: 550px){
+  .menuToggle {
+    display: block!important;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
   .services{
     height: auto;
   }
