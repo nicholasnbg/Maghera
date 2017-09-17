@@ -3,10 +3,22 @@ maghera green = #77BD3A;
 */
 
 /*=========GLOBAL=========*/
-button {
+button, .button {
   font-size: 1.4rem;
+  color: white;
   background: #77BD3A!important;
   border: 1px solid #77BD3A !important;
+}
+
+span {
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  background: lightgrey;
+  height: 1px;
+  width: 100%;
 }
 
 
@@ -65,17 +77,24 @@ header a {
 }
 
 
+
 .navbar ul li a {
   text-decoration: none;
   font-size: 1.4em;
   font-weight: bold;
   color: white;
   transition: .3s ease-in;
+
 }
 
 .navbar.scrolled ul li a {
   color: black;
   transition: .5s ease-in;
+  transition: color .2s ease-in;
+}
+
+.navbar.scrolled ul li:hover a{
+  color: white;
 }
 
 .center-row {
@@ -84,9 +103,11 @@ header a {
 
 /*==============HERO=============*/
 .hero {
-  height: 75vh;
+  height: 70vh;
   position: relative;
-  background: url('../images/hero.jpeg') no-repeat center center;
+  background-image: url('../images/hero.jpeg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
   background-size: cover;
   background-attachment: fixed;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.35);
@@ -106,7 +127,7 @@ header a {
 }
 
 .hero .u-full-width{
-  height: 75vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,8 +136,9 @@ header a {
 
 /*============QUOTE==========*/
 .quote {
-  height: 20vh;
+  height: auto;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .quote .u-full-width {
@@ -134,11 +156,128 @@ header a {
   height: auto;
 }
 
-/*============ABOUT=============*/
-.about {
-  height: 500px;
+/*===========ABOUT================*/
+.about .u-full-width {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding:  20px 0;
+}
+
+.about small {
+  color: #888;
+}
+
+.lines {
+  margin-bottom: 20px;
+}
+
+.line {
+  width: 40px;
+  height: 2px;
+  display: inline-block;
+  position: relative;
+  background: #77BD3A;
+  margin-top: 10px;
+  margin-left: 3px;
+}
+
+/*============SERVICES=============*/
+.services-heading {
+  text-align: center;
+}
+
+.services .row {
+  display: flex;
+}
+
+.main-services {
+  margin-bottom: 30px;
+}
+
+.service {
+  height: inherit;
+  padding: 15px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  box-shadow: 6px 6px 10px #888888;
+}
+
+.service img {
+  height: 200px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.service .button {
+  margin-top: auto;
+}
+
+.more-services{
+padding: 20px 0;
+}
+.more-services h3 {
+  text-align: center;
+}
+
+.more-services .u-full-width ul {
+  max-height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.more-services .u-full-width ul li {
+  margin-left: 10%;
 }
 
 
+/*=============FOOTER================*/
+footer {
+  background: #303030;
+  color: white;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
 
 /*============MEDIA QUERIES===========*/
+
+@media screen and (max-width: 550px){
+  .services{
+    height: auto;
+  }
+  .services .row {
+    display: block;
+    height: auto;
+  }
+
+  .service {
+    box-shadow: none;
+    margin-bottom: 10px;
+  }
+  .more-services .u-full-width {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .more-services .u-full-width ul {
+    height: auto;
+    flex-wrap: nowrap;
+  }
+
+  footer {
+    margin-top: 100px;
+  }
+}
