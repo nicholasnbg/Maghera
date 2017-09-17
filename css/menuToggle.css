@@ -1,8 +1,8 @@
 /*=============SIDE MENU TOGGLE ========*/
 
 .menuToggle {
-  height: 40px;
-  width: 40px;
+  height: 8vh;
+  width: 8vh;
   display:flex;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
