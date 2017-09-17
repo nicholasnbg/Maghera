@@ -263,7 +263,7 @@ footer a {
 
 @media screen and (max-width: 550px){
   .menuToggle {
-    display: block!important;
+    display: flex!important;
   }
 
   .navbar ul {
