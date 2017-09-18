@@ -6,14 +6,17 @@ $(document).ready(function(){
   var widthD = $(document).width();
   var heightD = $(document).height();
   $(document).scroll(function(){
-    var y = $(document).scrollTop();
-    if(y>5){
-      $('header').css('background-color','white');
-      $('.navbar').addClass('scrolled');
+    if($('body').hasClass('index')){
+      console.log('is index');
+      var y = $(document).scrollTop();
+      if(y>5){
+        $('header').css('background-color','white');
+        $('.navbar').addClass('scrolled');
+      }
+      else {
+        $('header').css('background-color','rgba(0 , 0, 0, .0');
+        $('.navbar').removeClass('scrolled');
     }
-    else {
-      $('header').css('background-color','rgba(0 , 0, 0, .0');
-      $('.navbar').removeClass('scrolled');
     }
 
 
@@ -28,4 +31,12 @@ $(document).ready(function(){
   $('.menuToggle').click(function(){
     $('.menuToggle').toggleClass('open');
   })
+
+  /*Smooth scroll for hero down arrow */
+  $("#down-arrow").click(function() {
+    console.log('down click');
+    $('html,body').animate({
+        scrollTop: $(".quote").offset().top + (-(heightW/100*8))},
+        'slow');
+        });
 });

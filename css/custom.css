@@ -22,6 +22,7 @@ hr {
 }
 
 
+
 /* HEADER AND NAV */
 header {
   height: 8vh;
@@ -34,13 +35,17 @@ header {
   transition: 0.3s ease-in;
 }
 
+header.white {
+  background: white;
+}
+
 header a {
   height: auto;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 8vh;
 }
@@ -66,7 +71,7 @@ header a {
 
 }
 
-.navbar.scrolled ul li.active a {
+.navbar.scrolled ul li.active a, header.white .navbar.scrolled ul li.active a {
   color: #77BD3A;
   border-bottom: 2px solid #77BD3A;
 }
@@ -97,6 +102,8 @@ header a {
   color: white;
 }
 
+
+
 .center-row {
   text-align: center;
 }
@@ -110,7 +117,7 @@ header a {
 }
 /*==============HERO=============*/
 .hero {
-  height: 70vh;
+  height: 100vh;
   position: relative;
   background-image: url('../images/hero.jpeg');
   background-repeat: no-repeat;
@@ -134,18 +141,30 @@ header a {
 }
 
 .hero .u-full-width{
-  height: 70vh;
+  height: 100vh;
   display: flex;
+  padding-top: 30vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
+
+
+.fa-arrow-circle-down {
+  margin-bottom: 30px;
+  color: white;
+  cursor: pointer;
+}
+
 
 /*============QUOTE==========*/
 .quote {
-  height: auto;
+  height: 45vh;
   text-align: center;
-  margin-bottom: 30px;
+  }
+
+.quote .container {
+  height: 100%;
 }
 
 .quote .u-full-width {
@@ -164,7 +183,13 @@ header a {
 }
 
 /*===========ABOUT================*/
+.about {
+  height: 45vh;
+  margin-bottom: 40px;
+}
+
 .about .u-full-width {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -192,6 +217,10 @@ header a {
 }
 
 /*============SERVICES=============*/
+.services {
+  margin-top:40px;
+}
+
 .services-heading {
   text-align: center;
 }
@@ -259,6 +288,64 @@ footer a {
 }
 
 
+
+/*==============PAGES===================
+=======================================*/
+
+/*==============SERVICS================*/
+.services-hero {
+  margin-top: 8vh;
+  height: 40vh;
+  background: url('../images/services-hero.jpg') no-repeat;
+  background-position: right;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.45);
+  color: white;
+  margin-bottom: 40px;
+}
+
+.services-hero div {
+  height: 100%;
+}
+
+.services-hero .u-full-width {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.service-blocks .u-full-width {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-blocks .one-half {
+  display: flex;
+  padding: 10px;
+}
+
+.service-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+.service-blocks .row {
+  margin-bottom: 20px;
+}
+
+.service-blocks .one-half {
+  background: rgba(0,0,0,0.10);
+  border-radius: .5em;
+}
+
+.service-blocks .button-primary {
+  width: 66%;
+  align-self: center;
+}
+
+
+
 /*============MEDIA QUERIES===========*/
 
 @media screen and (max-width: 550px){
@@ -270,6 +357,9 @@ footer a {
     display: none;
   }
 
+  .about {
+    height: auto;
+  }
   .services{
     height: auto;
   }
