@@ -82,7 +82,6 @@ header a {
 }
 
 
-
 .navbar ul li a {
   text-decoration: none;
   font-size: 1.4em;
@@ -101,7 +100,6 @@ header a {
 .navbar.scrolled ul li:hover a{
   color: white;
 }
-
 
 
 .center-row {
@@ -301,7 +299,11 @@ footer a {
 /*==============PAGES===================
 =======================================*/
 
-/*==============SERVICS================*/
+/*==============SERVICES================*/
+.page-header {
+  background: white;
+}
+
 .services-hero {
   margin-top: 8vh;
   height: 40vh;
@@ -328,30 +330,204 @@ footer a {
   margin-bottom: 20px;
 }
 
-.service-blocks .one-half {
-  display: flex;
-  padding: 10px;
-}
-
-.service-text {
-  display: flex;
-  flex-direction: column;
-  padding-left: 15px;
-}
-
 .service-blocks .row {
   margin-bottom: 20px;
 }
 
 .service-blocks .one-half {
-  background: rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: rgba(0,0,0,0.03);
   border-radius: .5em;
 }
 
-.service-blocks .button-primary {
-  width: 66%;
-  align-self: center;
+
+.service-blocks img {
+  width: 50%;
+  margin-bottom: 10px;
 }
+
+/*===============TESTIMONAIALS========*/
+.testimonials-hero {
+  margin-top: 8vh;
+  height: 40vh;
+  background: url('../images/testimonials.jpg') no-repeat;
+  background-position: 50% 72%;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.45);
+  color: white;
+  margin-bottom: 40px;
+}
+
+.testimonials-hero div {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.testimonials .u-full-width {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.testimonial img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 5px;
+}
+
+/*=============CONTACT===============*/
+.contact-hero {
+  margin-top: 8vh;
+  height: 40vh;
+  background: url('../images/contact.jpg') no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.45);
+  color: white;
+  margin-bottom: 40px;
+}
+
+.contact-hero div {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-form * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -webkit-font-smoothing: antialiased;
+ -moz-font-smoothing: antialiased;
+ -o-font-smoothing: antialiased;
+ font-smoothing: antialiased;
+ text-rendering: optimizeLegibility;
+}
+
+
+
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 15px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
 
 
 
@@ -403,6 +579,14 @@ footer a {
 
   footer {
     margin-top: 100px;
+  }
+
+  .service-blocks .one-half:nth-child(1){
+    margin-bottom:20px;
+  }
+
+  .contact-form {
+    margin-bottom: 40px;
   }
 }
 

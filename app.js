@@ -10,8 +10,9 @@ $(document).ready(function(){
 
 
   $(document).scroll(function(){
+
+    var y = $(document).scrollTop();
     if($('body').hasClass('index')){
-      var y = $(document).scrollTop();
       if(y>5){
         $('header').css('background-color','white');
         $('.navbar').addClass('scrolled');
@@ -21,10 +22,11 @@ $(document).ready(function(){
           $('header').css('background-color','rgba(0 , 0, 0, .0');
           $('.navbar').removeClass('scrolled');
         }
-    }
+      }
     }
 
-/*Changes opacity of hero image when scrolled*/
+
+    /*Changes opacity of hero image when scrolled*/
     if(y>0 && y<heightW/2){
       var scrollPerc = (y/(heightW/2))*.5;
       var backgroundAlpha = 0.35*(1-scrollPerc);
@@ -43,8 +45,10 @@ $(document).ready(function(){
     } else {
       var y = $(document).scrollTop();
       if(y<=5){
-        $('header').css('background-color','rgba(0 , 0, 0, .0');
-        $('.navbar').removeClass('scrolled');
+        if($('body').hasClass('index')){
+          $('header').css('background-color','rgba(0 , 0, 0, .0');
+          $('.navbar').removeClass('scrolled');
+        }
       }
       $('#mobile-menu').hide('fast')
     }
@@ -58,7 +62,7 @@ $(document).ready(function(){
   $("#down-arrow").click(function() {
     console.log('down click');
     $('html,body').animate({
-        scrollTop: $(".quote").offset().top + (-(heightW/100*8))},
-        'slow');
-        });
-});
+      scrollTop: $(".quote").offset().top + (-(heightW/100*8))},
+      'slow');
+    });
+  });
