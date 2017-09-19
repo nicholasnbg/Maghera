@@ -5,6 +5,16 @@ $(document).ready(function(){
   var heightW = $(window).height();
   var widthD = $(document).width();
   var heightD = $(document).height();
+
+
+  function fixHeight(){
+    console.log(heightW);
+    $('.hero').css('height','heightW');
+  }
+
+  fixHeight();
+
+
   $(document).scroll(function(){
     if($('body').hasClass('index')){
       console.log('is index');

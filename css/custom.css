@@ -117,7 +117,7 @@ header a {
 }
 /*==============HERO=============*/
 .hero {
-  height: 100vh;
+  height: auto;
   position: relative;
   background-image: url('../images/hero.jpeg');
   background-repeat: no-repeat;
@@ -159,7 +159,7 @@ header a {
 
 /*============QUOTE==========*/
 .quote {
-  height: 45vh;
+  min-height: 45vh;
   text-align: center;
   }
 
@@ -184,7 +184,7 @@ header a {
 
 /*===========ABOUT================*/
 .about {
-  height: 45vh;
+  min-height: 45vh;
   margin-bottom: 40px;
 }
 
