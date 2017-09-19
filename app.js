@@ -7,12 +7,6 @@ $(document).ready(function(){
   var heightD = $(document).height();
 
 
-  function fixHeight(){
-    console.log(heightW);
-    $('.hero').css('height','heightW');
-  }
-
-  fixHeight();
 
 
   $(document).scroll(function(){

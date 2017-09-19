@@ -117,7 +117,7 @@ header a {
 }
 /*==============HERO=============*/
 .hero {
-  height: auto;
+  height: 100vh;
   position: relative;
   background-image: url('../images/hero.jpeg');
   background-repeat: no-repeat;
@@ -349,6 +349,11 @@ footer a {
 /*============MEDIA QUERIES===========*/
 
 @media screen and (max-width: 550px){
+
+  .fa-arrow-circle-down {
+    margin-bottom: 70px;
+  }
+
   .menuToggle {
     display: flex!important;
   }
