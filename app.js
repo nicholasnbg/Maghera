@@ -1,15 +1,14 @@
 $(document).ready(function(){
 
-  /*Change appearanc of navbar when scrolled from top of page*/
+/*save window and document widths and heights */
   var widthW = $(window).width();
   var heightW = $(window).height();
   var widthD = $(document).width();
   var heightD = $(document).height();
 
 
-
+  /*Change appearance of navbar when scrolled from top of page*/
   $(document).scroll(function(){
-
     var y = $(document).scrollTop();
     if($('body').hasClass('index')){
       if(y>5){
@@ -17,10 +16,8 @@ $(document).ready(function(){
         $('.navbar').addClass('scrolled');
       }
       else {
-        if(widthW>550){
           $('header').css('background-color','rgba(0 , 0, 0, .0');
           $('.navbar').removeClass('scrolled');
-        }
       }
     }
 
@@ -35,11 +32,11 @@ $(document).ready(function(){
 
   /*Mobile Nav functions*/
   $('.menuToggle').click(function(){
-    if(!($('.menuToggle').hasClass('open'))){
+    if(!($('.menuToggle').hasClass('open'))){ //if menu isn't already open
       $('header').css('background-color','white');
       $('.navbar').addClass('scrolled');
-      $('#mobile-menu').css('width','40vw');
-      $('.blur').show('fast');
+      $('#mobile-menu').css('width','40vw'); //open side menu
+      $('.blur').show('fast'); //apply blur overlay between side menu and page content
     } else {
       var y = $(document).scrollTop();
       if(y<=5){
@@ -48,12 +45,12 @@ $(document).ready(function(){
           $('.navbar').removeClass('scrolled');
         }
       }
-      $('#mobile-menu').css('width','0px');
-      $('.blur').hide('fast');
+      $('#mobile-menu').css('width','0px'); // hide side menu
+      $('.blur').hide('fast'); // remove blur overlay
     }
   })
 
-  $('.menuToggle').click(function(){
+  $('.menuToggle').click(function(){ //toggles flag for opening and closing side menu on mobile
     $('.menuToggle').toggleClass('open');
   })
 
