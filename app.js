@@ -39,7 +39,7 @@ $(document).ready(function(){
     if(!($('.menuToggle').hasClass('open'))){
       $('header').css('background-color','white');
       $('.navbar').addClass('scrolled');
-      $('#mobile-menu').css('width','200px');
+      $('#mobile-menu').css('width','40vw');
     } else {
       var y = $(document).scrollTop();
       if(y<=5){
