@@ -37,11 +37,9 @@ $(document).ready(function(){
   /*Mobile Nav functions*/
   $('.menuToggle').click(function(){
     if(!($('.menuToggle').hasClass('open'))){
-      console.log('open menu');
       $('header').css('background-color','white');
-      $('header').css('height','auto');
       $('.navbar').addClass('scrolled');
-      $('#mobile-menu').show('fast')
+      $('#mobile-menu').css('width','200px');
     } else {
       var y = $(document).scrollTop();
       if(y<=5){
@@ -50,7 +48,7 @@ $(document).ready(function(){
           $('.navbar').removeClass('scrolled');
         }
       }
-      $('#mobile-menu').hide('fast')
+      $('#mobile-menu').css('width','0px');
     }
   })
 

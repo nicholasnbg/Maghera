@@ -111,15 +111,32 @@ header a {
 }
 
 #mobile-menu {
-  display: none;
-  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  width: 0px;
+  height: 100%;
+  background: #111;
+  opacity: 0.9;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  padding-top: 20px;
+  overflow-x: hidden;
+  margin-top: 8vh;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
 #mobile-menu a {
   padding: 5px 2px;
+  margin-left: 20px;
+  z-index: 2;
+  color: white;
   text-decoration: none;
   font-weight: normal;
-  color: black;
 }
 
 /*==============HERO=============*/
@@ -520,7 +537,7 @@ fieldset {
   color: #888;
 }
 
-::-moz-placeholder {
+#contact ::-moz-placeholder {
   color: #888;
 }
 
@@ -548,8 +565,12 @@ fieldset {
   }
 
   .navbar {
+    /*
     flex-direction: column;
     height: auto;
+    */
+    justify-content: flex-end;
+    margin-right: 15px;
   }
 
   .about {
@@ -587,6 +608,10 @@ fieldset {
 
   .contact-form {
     margin-bottom: 40px;
+  }
+
+  .testimonial {
+    flex-direction: column;
   }
 }
 
