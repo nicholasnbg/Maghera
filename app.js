@@ -8,7 +8,6 @@ $(document).ready(function(){
 
 
 
-
   $(document).scroll(function(){
 
     var y = $(document).scrollTop();
@@ -40,6 +39,7 @@ $(document).ready(function(){
       $('header').css('background-color','white');
       $('.navbar').addClass('scrolled');
       $('#mobile-menu').css('width','40vw');
+      $('.blur').show('fast');
     } else {
       var y = $(document).scrollTop();
       if(y<=5){
@@ -49,6 +49,7 @@ $(document).ready(function(){
         }
       }
       $('#mobile-menu').css('width','0px');
+      $('.blur').hide('fast');
     }
   })
 
