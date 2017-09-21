@@ -348,6 +348,28 @@ footer a {
 /*==============PAGES===================
 =======================================*/
 
+/*==============ABOUT===================*/
+.about-hero {
+  margin-top: 8vh;
+  height: 40vh;
+  background: url('../images/services-hero.jpg') no-repeat;
+  background-position: right;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.45);
+  color: white;
+  margin-bottom: 40px;
+}
+
+.about-hero div {
+  height: 100%;
+}
+
+.about-hero .u-full-width {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /*==============SERVICES================*/
 .page-header {
   background: white;
