@@ -352,7 +352,7 @@ footer a {
 .about-hero {
   margin-top: 8vh;
   height: 40vh;
-  background: url('../images/services-hero.jpg') no-repeat;
+  background: url('../images/about-hero.jpg') no-repeat;
   background-position: right;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.45);
